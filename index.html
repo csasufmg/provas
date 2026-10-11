@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Banco de Questões — DMPS/UFMG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="login" class="login-wrap" style="display:none">
+  <form class="card login-card" id="loginForm">
+    <h1>Banco de Questões</h1>
+    <p class="muted" style="margin-top:0">Acesso restrito a professores autorizados.</p>
+    <div class="field"><label>E-mail</label><input type="text" id="lgEmail" autocomplete="username"></div>
+    <div class="field"><label>Senha</label><input type="password" id="lgPass" autocomplete="current-password" style="background:var(--surface-2);border:1px solid var(--border);border-radius:7px;color:var(--text);padding:8px 10px;font-size:14px"></div>
+    <div class="err" id="lgErr"></div>
+    <button class="btn" style="width:100%" type="submit">Entrar</button>
+  </form>
+</div>
+<div id="app" style="display:none">
+  <header class="app no-print">
+    <div><h1>Banco de Questões</h1><div class="sub" id="who"></div></div>
+    <div class="hdr-right"><select id="discSel"></select><button class="btn secondary small" id="btnOut">Sair</button></div>
+  </header>
+  <nav class="tabs no-print" id="tabs"></nav>
+  <main id="view" class="no-print"></main>
+</div>
+<div id="modalRoot" class="no-print"></div>
+<div class="print-area" id="printArea"></div>
+<div class="toast" id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="js/core.js"></script>
+<script src="js/banco.js"></script>
+<script src="js/provas.js"></script>
+<script src="js/boot.js"></script>
+</body></html>
